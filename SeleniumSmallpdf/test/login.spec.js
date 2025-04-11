@@ -58,9 +58,15 @@ describe("Login", () => {
         await inputFile.sendKeys(filePath);
         await tomarCaptura(driver, '05');
         //boton descargar
-        await driver.wait(until.elementLocated(By.css('.sc-1bu7qfl-0.bGbCKV.sc-1az4ycp-1.ebRjiG')), 15000);
-        const linkdownload = await driver.findElement(By.css('.sc-1bu7qfl-0.bGbCKV.sc-1az4ycp-1.ebRjiG'));
+
+        await driver.wait(until.elementLocated(By.xpath('//div[span[contains(text(), "Download")]]')), 15000);
+        const linkdownload = await driver.findElement(By.xpath('//div[span[contains(text(), "Download")]]'));
         await linkdownload.click();
+
+
+       /* await driver.wait(until.elementLocated(By.css('.sc-1bu7qfl-0.bGbCKV.sc-1az4ycp-1.ebRjiG')), 15000);
+        const linkdownload = await driver.findElement(By.css('.sc-1bu7qfl-0.bGbCKV.sc-1az4ycp-1.ebRjiG'));
+        await linkdownload.click();*/
         await tomarCaptura(driver, '06');
         //fin de pdf to word//
 
@@ -142,6 +148,7 @@ describe("Login", () => {
 
 
         await driver.sleep(20000)
+        await tomarCaptura(driver, '14');
         await driver.quit();
         
     });
