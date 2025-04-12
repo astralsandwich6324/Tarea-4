@@ -1,0 +1,20 @@
+{
+  "name": "seleniumsmallpdf",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/*.spec.js --reporter mochawesome --reporter-options reportDir=reportes,reportFilename=login-result --no-timeouts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "mocha": "^11.1.0",
+    "selenium-webdriver": "^4.31.0",
+    "webdriver-manager": "^12.1.9"
+  },
+  "devDependencies": {
+    "mochawesome": "^7.1.3"
+  }
+}
